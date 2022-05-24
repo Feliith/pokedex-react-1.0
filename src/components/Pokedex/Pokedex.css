@@ -1,0 +1,55 @@
+
+.pokedex-container {
+    background: #98D0F8;
+    width: 340px;
+    height: 40px;
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.pokedex-container.on {
+    width: 340px;
+    height: 486px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.pokedex-container > img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pokedex-container > img:nth-child(1) {
+    top: -50px;
+}
+
+.pokedex-container > img:nth-child(2) {
+    bottom: -50px;
+    transform: rotateX(180deg) translateX(-50%);
+}
+
+.pokedex-container > button {
+    background: none;
+    border: none;
+    position: absolute;
+    left: -100px;
+    animation: UpDown 1s infinite alternate;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.pokedex-container > button:hover {
+    filter: brightness(80%);
+}
+
+@keyframes UpDown {
+    from {
+        transform: translateY(0) rotate(180deg);
+    } to {
+        transform: translateY(10px) rotate(180deg);
+    }
+}

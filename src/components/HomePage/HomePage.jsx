@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 import YellowTriangle from '../../img/triangle.png'
 
-const HomePage = () => {
+const HomePage = (props) => {
 
     const [opened, setOpened] = useState(false)
 
@@ -11,15 +11,13 @@ const HomePage = () => {
         setOpened(!opened)
     }
 
-    const [off, setOff] = useState(false)
-
     function turnOff() {
-        setOff(true)
+        props.setOff(true)
         setOpened(false)
     }
 
     return (
-        <div className={off ? 'pokedex-closed off' : 'pokedex-closed'}>
+        <div className={props.off ? 'pokedex-closed off' : 'pokedex-closed'}>
             <div className={!opened ? "pokedex-cover" : "pokedex-cover opened"}>
                 <button onClick={openDex}>
                     <img src={YellowTriangle} alt="Open" />

@@ -47,6 +47,7 @@
 }
 
 .pokedex-content {
+    background: url('../../img/buttons-01.png');
     width: 288px;
     height: 330px;
     margin: 0 0 30px 24px;
@@ -54,20 +55,19 @@
     bottom: 0;
     z-index: 25;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    padding-top: 30px;
 }
 
 .pokedex-screen {
-    background: #000;
-    width: 180px;
-    height: 140px;
-    border-radius: 6px;
-    border: 20px solid #fff;
+    background: url('../../img/screen.png');
+    width: 216px;
+    height: 168px;
     cursor: pointer;
     transition: .3s;
 }
 
 .pokedex-screen:hover {
-    background: #acacac;
+    filter: brightness(80%);
 }
