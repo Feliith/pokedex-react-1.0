@@ -32,7 +32,7 @@
     transform: rotateX(180deg) translateX(-50%);
 }
 
-.pokedex-container > button {
+.pokedex-container > button:nth-child(3) {
     background: none;
     border: none;
     position: absolute;
@@ -42,8 +42,29 @@
     cursor: pointer;
 }
 
-.pokedex-container > button:hover {
+.pokedex-container > button:nth-child(3):hover {
     filter: brightness(80%);
+}
+
+.pokedex-wrap {
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 200px 0;
+}
+
+.pokemon-wrap {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 100%;
+    height: 300%;
+}
+
+.pokemon-wrap > button {
+    height: 40px;
 }
 
 @keyframes UpDown {

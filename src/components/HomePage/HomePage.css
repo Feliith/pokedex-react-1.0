@@ -40,6 +40,7 @@
     position: absolute;
     bottom: 0;
     transition: .3s;
+    animation: .8s alternate infinite flash;
 }
 
 .pokedex-cover button:hover {
@@ -70,4 +71,12 @@
 
 .pokedex-screen:hover {
     filter: brightness(80%);
+}
+
+@keyframes flash {
+    from {
+        background: none;
+    } to { 
+        background: #ffffff20;
+    }
 }

@@ -16,10 +16,16 @@ const HomePage = (props) => {
         setOpened(false)
     }
 
+    function animationOff() {
+        const dexButton = document.querySelector('.pokedex-cover > button')
+        dexButton.style.animation = 'none'
+        console.log(dexButton)
+    }
+
     return (
         <div className={props.off ? 'pokedex-closed off' : 'pokedex-closed'}>
             <div className={!opened ? "pokedex-cover" : "pokedex-cover opened"}>
-                <button onClick={openDex}>
+                <button onClick={openDex} onMouseEnter={animationOff}>
                     <img src={YellowTriangle} alt="Open" />
                 </button>
             </div>
