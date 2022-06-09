@@ -1,6 +1,6 @@
 
 .pokedex-container {
-    background: #98D0F8;
+    background: radial-gradient(#aedafc 50%, #7bc7fd);
     width: 340px;
     height: 40px;
     position: absolute;
@@ -21,14 +21,15 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 100;
 }
 
 .pokedex-container > img:nth-child(1) {
-    top: -50px;
+    top: -90px;
 }
 
 .pokedex-container > img:nth-child(2) {
-    bottom: -50px;
+    bottom: -90px;
     transform: rotateX(180deg) translateX(-50%);
 }
 
@@ -47,24 +48,86 @@
 }
 
 .pokedex-wrap {
-    overflow: hidden;
+    overflow: auto;
     width: inherit;
     height: inherit;
     display: flex;
-    align-items: center;
-    padding: 200px 0;
+    align-items: flex-start;
+    padding: 80px 0;
+}
+
+.pokedex-wrap::-webkit-scrollbar {
+    width: 0px;
 }
 
 .pokemon-wrap {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    overflow-y: scroll;
     width: 100%;
-    height: 300%;
+    min-height: 1px;
 }
 
-.pokemon-wrap > button {
-    height: 40px;
+.pokemon-button {
+    background: linear-gradient(90deg, #61bcfd5d, #b9def85d, #61bcfd5d);
+    color: #fff;
+    font-size: 18px;
+    height: 60px;
+    width: 96%;
+    margin: 4px 0;
+    border-radius: 6px;
+    border: 1px solid #4592c941;
+    box-shadow: 2px 2px 0 #3a8ac441;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.pokemon-button:hover {
+    background: linear-gradient(90deg, #3dadfd5d, #98d2fc5d, #3dadfd5d);
+}
+
+.pokemon-button:first-child {
+    display: none;
+}
+
+.pokemon-button p:nth-child(2) {
+    color: #2c6d9b80;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.pokemon-icon {
+    display: flex;
+    align-items: center;
+}
+
+.pokemon-icons-wrap {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pokemon-icons-wrap img {
+    transform: scale(180%);
+    position: absolute;
+    left: 0;
+}
+
+.pokemon-icons-wrap img:last-child {
+    animation: z0to1 infinite alternate 0.5s;
+}
+
+.pokemon-icon > p {
+    color: #fff;
+    font-size: 17px;
+    margin-left: 8px;
 }
 
 @keyframes UpDown {
@@ -72,5 +135,13 @@
         transform: translateY(0) rotate(180deg);
     } to {
         transform: translateY(10px) rotate(180deg);
+    }
+}
+
+@keyframes z0to1 {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
     }
 }

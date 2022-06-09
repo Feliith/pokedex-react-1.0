@@ -2,607 +2,610 @@
 const PokeDex = [
     {id: 'start'},
     {
-        id: 1,
+        id: '001',
         name: 'Bulbasaur',
+        src: {
+            icon1: require('../img/icons/001-1.png')
+        }
     },
     {
-        id: 2,
+        id: '002',
         name: 'Ivysaur',
     },
     {
-        id: 3,
+        id: '003',
         name: 'Venusaur',
     },
     {
-        id: 4,
+        id: '004',
         name: 'Charmander',
     },
     {
-        id: 5,
+        id: '005',
         name: 'Charmeleon',
     },
     {
-        id: 6,
+        id: '006',
         name: 'Charizard',
     },
     {
-        id: 7,
+        id: '007',
         name: 'Squirtle',
     },
     {
-        id: 8,
+        id: '008',
         name: 'Wartortle',
     },
     {
-        id: 9,
+        id: '009',
         name: 'Blastoise',
     },
     {
-        id: 10,
+        id: '010',
         name: 'Caterpie',
     },
     {
-        id: 11,
+        id: '011',
         name: 'Metapod',
     },
     {
-        id: 12,
+        id: '012',
         name: 'Butterfree',
     },
     {
-        id: 13,
+        id: '013',
         name: 'Weedle',
     },
     {
-        id: 14,
+        id: '014',
         name: 'Kakuna',
     },
     {
-        id: 15,
+        id: '015',
         name: 'Beedrill',
     },
     {
-        id: 16,
+        id: '016',
         name: 'Pidgey',
     },
     {
-        id: 17,
+        id: '017',
         name: 'Pidgeotto',
     },
     {
-        id: 18,
+        id: '018',
         name: 'Pidgeot',
     },
     {
-        id: 19,
+        id: '019',
         name: 'Rattata',
     },
     {
-        id: 20,
+        id: '020',
         name: 'Raticate',
     },
     {
-        id: 21,
+        id: '021',
         name: 'Spearow',
     },
     {
-        id: 22,
+        id: '022',
         name: 'Fearow',
     },
     {
-        id: 23,
+        id: '023',
         name: 'Ekans',
     },
     {
-        id: 24,
+        id: '024',
         name: 'Arbok',
     },
     {
-        id: 25,
+        id: '025',
         name: 'Pikachu',
     },
     {
-        id: 26,
+        id: '026',
         name: 'Raichu',
     },
     {
-        id: 27,
+        id: '027',
         name: 'Sandshrew',
     },
     {
-        id: 28,
+        id: '028',
         name: 'Sandslash',
     },
     {
-        id: 29,
+        id: '029',
         name: 'Nidoran ♀',
     },
     {
-        id: 30,
+        id: '030',
         name: 'Nidorina',
     },
     {
-        id: 31,
+        id: '031',
         name: 'Nidoqueen',
     },
     {
-        id: 32,
+        id: '032',
         name: 'Nidoran ♂',
     },
     {
-        id: 33,
+        id: '033',
         name: 'Nidorino',
     },
     {
-        id: 34,
+        id: '034',
         name: 'Nidoking',
     },
     {
-        id: 35,
+        id: '035',
         name: 'Clefairy',
     },
     {
-        id: 36,
+        id: '036',
         name: 'Clefable',
     },
     {
-        id: 37,
+        id: '037',
         name: 'Vulpix',
     },
     {
-        id: 38,
+        id: '038',
         name: 'Ninetales',
     },
     {
-        id: 39,
+        id: '039',
         name: 'Jigglypuff',
     },
     {
-        id: 40,
+        id: '040',
         name: 'Wigglytuff',
     },
     {
-        id: 41,
+        id: '041',
         name: 'Zubat',
     },
     {
-        id: 42,
+        id: '042',
         name: 'Golbat',
     },
     {
-        id: 43,
+        id: '043',
         name: 'Oddish',
     },
     {
-        id: 44,
+        id: '044',
         name: 'Gloom',
     },
     {
-        id: 45,
+        id: '045',
         name: 'Vileplume',
     },
     {
-        id: 46,
+        id: '046',
         name: 'Paras',
     },
     {
-        id: 47,
+        id: '047',
         name: 'Parasect',
     },
     {
-        id: 48,
+        id: '048',
         name: 'Venonat',
     },
     {
-        id: 49,
+        id: '049',
         name: 'Venomoth',
     },
     {
-        id: 50,
+        id: '050',
         name: 'Diglett',
     },
     {
-        id: 51,
+        id: '051',
         name: 'Dugtrio',
     },
     {
-        id: 52,
+        id: '052',
         name: 'Meowth',
     },
     {
-        id: 53,
+        id: '053',
         name: 'Persian',
     },
     {
-        id: 54,
+        id: '054',
         name: 'Psyduck',
     },
     {
-        id: 55,
+        id: '055',
         name: 'Golduck',
     },
     {
-        id: 56,
+        id: '056',
         name: 'Mankey',
     },
     {
-        id: 57,
+        id: '057',
         name: 'Primeape',
     },
     {
-        id: 58,
+        id: '058',
         name: 'Growlithe',
     },
     {
-        id: 59,
+        id: '059',
         name: 'Arcanine',
     },
     {
-        id: 60,
+        id: '060',
         name: 'Poliwag',
     },
     {
-        id: 61,
+        id: '061',
         name: 'Poliwhirl',
     },
     {
-        id: 61,
+        id: '061',
         name: 'Poliwrath',
     },
     {
-        id: 63,
+        id: '063',
         name: 'Abra',
     },
     {
-        id: 64,
+        id: '064',
         name: 'Kadabra',
     },
     {
-        id: 65,
+        id: '065',
         name: 'Alakazam',
     },
     {
-        id: 66,
+        id: '066',
         name: 'Machop',
     },
     {
-        id: 67,
+        id: '067',
         name: 'Machoke',
     },
     {
-        id: 68,
+        id: '068',
         name: 'Machamp',
     },
     {
-        id: 69,
+        id: '069',
         name: 'Bellsprout',
     },
     {
-        id: 70,
+        id: '070',
         name: 'Weepinbell',
     },
     {
-        id: 71,
+        id: '071',
         name: 'Victreebel',
     },
     {
-        id: 72,
+        id: '072',
         name: 'Tentacool',
     },
     {
-        id: 73,
+        id: '073',
         name: 'Tentacruel',
     },
     {
-        id: 74,
+        id: '074',
         name: 'Geodude',
     },
     {
-        id: 75,
+        id: '075',
         name: 'Graveler',
     },
     {
-        id: 76,
+        id: '076',
         name: 'Golem',
     },
     {
-        id: 77,
+        id: '077',
         name: 'Ponyta',
     },
     {
-        id: 78,
+        id: '078',
         name: 'Rapidash',
     },
     {
-        id: 79,
+        id: '079',
         name: 'Slowpoke',
     },
     {
-        id: 80,
+        id: '080',
         name: 'Slowbro',
     },
     {
-        id: 81,
+        id: '081',
         name: 'Magnemite',
     },
     {
-        id: 82,
+        id: '082',
         name: 'Magneton',
     },
     {
-        id: 83,
+        id: '083',
         name: 'Farfetch &lsquo d',
     },
     {
-        id: 84,
+        id: '084',
         name: 'Doduo',
     },
     {
-        id: 85,
+        id: '085',
         name: 'Dodrio',
     },
     {
-        id: 86,
+        id: '086',
         name: 'Seel',
     },
     {
-        id: 87,
+        id: '087',
         name: 'Dewgong',
     },
     {
-        id: 88,
+        id: '088',
         name: 'Grimer',
     },
     {
-        id: 89,
+        id: '089',
         name: 'Muk',
     },
     {
-        id: 90,
+        id: '090',
         name: 'Shellder',
     },
     {
-        id: 91,
+        id: '091',
         name: 'Cloyster',
     },
     {
-        id: 92,
+        id: '092',
         name: 'Gastly',
     },
     {
-        id: 93,
+        id: '093',
         name: 'Haunter',
     },
     {
-        id: 94,
+        id: '094',
         name: 'Gengar',
     },
     {
-        id: 95,
+        id: '095',
         name: 'Onix',
     },
     {
-        id: 96,
+        id: '096',
         name: 'Drowzee',
     },
     {
-        id: 97,
+        id: '097',
         name: 'Hypno',
     },
     {
-        id: 98,
+        id: '098',
         name: 'Krabby',
     },
     {
-        id: 99,
+        id: '099',
         name: 'Kingler',
     },
     {
-        id: 100,
+        id: '100',
         name: 'Voltorb',
     },
     {
-        id: 101,
+        id: '101',
         name: 'Electrode',
     },
     {
-        id: 102,
+        id: '102',
         name: 'Exeggcute',
     },
     {
-        id: 103,
+        id: '103',
         name: 'Exeggutor',
     },
     {
-        id: 104,
+        id: '104',
         name: 'Cubone',
     },
     {
-        id: 105,
+        id: '105',
         name: 'Marowak',
     },
     {
-        id: 106,
+        id: '106',
         name: 'Hitmonlee',
     },
     {
-        id: 107,
+        id: '107',
         name: 'Hitmonchan',
     },
     {
-        id: 108,
+        id: '108',
         name: 'Lickitung',
     },
     {
-        id: 109,
+        id: '109',
         name: 'Koffing',
     },
     {
-        id: 110,
+        id: '110',
         name: 'Weezing',
     },
     {
-        id: 111,
+        id: '111',
         name: 'Rhyhorn',
     },
     {
-        id: 112,
+        id: '112',
         name: 'Rhydon',
     },
     {
-        id: 113,
+        id: '113',
         name: 'Chansey',
     },
     {
-        id: 114,
+        id: '114',
         name: 'Tangela',
     },
     {
-        id: 115,
+        id: '115',
         name: 'Kangaskhan',
     },
     {
-        id: 116,
+        id: '116',
         name: 'Horsea',
     },
     {
-        id: 117,
+        id: '117',
         name: 'Seadra',
     },
     {
-        id: 118,
+        id: '118',
         name: 'Goldeen',
     },
     {
-        id: 119,
+        id: '119',
         name: 'Seaking',
     },
     {
-        id: 120,
+        id: '120',
         name: 'Staryu',
     },
     {
-        id: 121,
+        id: '121',
         name: 'Starmie',
     },
     {
-        id: 122,
+        id: '122',
         name: 'Mr. Mime',
     },
     {
-        id: 123,
+        id: '123',
         name: 'Scyther',
     },
     {
-        id: 124,
+        id: '124',
         name: 'Jynx',
     },
     {
-        id: 125,
+        id: '125',
         name: 'Electabuzz',
     },
     {
-        id: 126,
+        id: '126',
         name: 'Magmar',
     },
     {
-        id: 127,
+        id: '127',
         name: 'Pinsir',
     },
     {
-        id: 128,
+        id: '128',
         name: 'Tauros',
     },
     {
-        id: 129,
+        id: '129',
         name: 'Magikarp',
     },
     {
-        id: 130,
+        id: '130',
         name: 'Gyarados',
     },
     {
-        id: 131,
+        id: '131',
         name: 'Lapras',
     },
     {
-        id: 132,
+        id: '132',
         name: 'Ditto',
     },
     {
-        id: 133,
+        id: '133',
         name: 'Eevee',
     },
     {
-        id: 134,
+        id: '134',
         name: 'Vaporeon',
     },
     {
-        id: 135,
+        id: '135',
         name: 'Jolteon',
     },
     {
-        id: 136,
+        id: '136',
         name: 'Flareon',
     },
     {
-        id: 137,
+        id: '137',
         name: 'Porygon',
     },
     {
-        id: 138,
+        id: '138',
         name: 'Omanyte',
     },
     {
-        id: 139,
+        id: '139',
         name: 'Omastar',
     },
     {
-        id: 140,
+        id: '140',
         name: 'Kabuto',
     },
     {
-        id: 141,
+        id: '141',
         name: 'Kabutops',
     },
     {
-        id: 142,
+        id: '142',
         name: 'Aerodactyl',
     },
     {
-        id: 143,
+        id: '143',
         name: 'Snorlax',
     },
     {
-        id: 144,
+        id: '144',
         name: 'Articuno',
     },
     {
-        id: 145,
+        id: '145',
         name: 'Zapdos',
     },
     {
-        id: 146,
+        id: '146',
         name: 'Moltres',
     },
     {
-        id: 147,
+        id: '147',
         name: 'Dratini',
     },
     {
-        id: 148,
+        id: '148',
         name: 'Dragonair',
     },
     {
-        id: 149,
+        id: '149',
         name: 'Dragonite',
     },
     {
-        id: 150,
+        id: '150',
         name: 'Mewtwo',
     },
     {
-        id: 151,
+        id: '151',
         name: 'Mew',
     },
 ]

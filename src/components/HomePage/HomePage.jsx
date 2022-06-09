@@ -19,7 +19,6 @@ const HomePage = (props) => {
     function animationOff() {
         const dexButton = document.querySelector('.pokedex-cover > button')
         dexButton.style.animation = 'none'
-        console.log(dexButton)
     }
 
     return (

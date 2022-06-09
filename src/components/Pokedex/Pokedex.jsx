@@ -21,7 +21,17 @@ const Pokedex = (props) => {
                 <div className="pokemon-wrap">
                     {PokeDex.map((item, index) => {
                         return (
-                            <button>{item.name}</button>
+                            <button key={index}
+                            className='pokemon-button'>
+                                <div className="pokemon-icon">
+                                    <div className="pokemon-icons-wrap">
+                                        <img src={require(`../../img/icons/${item.id}-1.png`)} />
+                                        <img src={require(`../../img/icons/${item.id}-2.png`)} />
+                                    </div>
+                                    <p>{item.name}</p>
+                                </div>
+                                <p>#{item.id}</p>
+                            </button>
                         )
                     })}
                 </div>
