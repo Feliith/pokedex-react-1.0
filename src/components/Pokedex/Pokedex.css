@@ -114,20 +114,19 @@
     position: relative;
 }
 
-.pokemon-icons-wrap img {
+.pokemon-icons-wrap canvas {
     transform: scale(180%);
     position: absolute;
     left: 0;
 }
 
-.pokemon-icons-wrap img:last-child {
-    animation: z0to1 infinite alternate 0.5s;
+.pokemon-icons-wrap canvas.off {
+    opacity: 0;
 }
 
 .pokemon-icon > p {
     color: #fff;
     font-size: 17px;
-    margin-left: 8px;
 }
 
 @keyframes UpDown {

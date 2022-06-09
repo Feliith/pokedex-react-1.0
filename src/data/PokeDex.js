@@ -4,9 +4,6 @@ const PokeDex = [
     {
         id: '001',
         name: 'Bulbasaur',
-        src: {
-            icon1: require('../img/icons/001-1.png')
-        }
     },
     {
         id: '002',
