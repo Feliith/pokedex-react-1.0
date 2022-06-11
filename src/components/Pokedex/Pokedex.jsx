@@ -8,6 +8,7 @@ import Triangle from '../../img/triangle.png'
 import { useState } from 'react'
 
 import PokemonInfo from './PokemonInfo/PokemonInfo'
+import RemoveBGicon from '../RemoveBG/RemoveBGicon'
 
 const Pokedex = (props) => {
 
@@ -29,40 +30,6 @@ const Pokedex = (props) => {
         setActualPokemon(PokeDex[index])
         setInfoOn(!infoOn)
     }
-
-    function bg() {
-        const canvas01 = document.querySelectorAll('.canvas-01')
-
-        PokeDex.map((item, index) => {
-            const image = new Image()
-            image.src = require(`../../img/icons/${item.id}-1.png`)
-            image.onload = drawImage
-
-            function drawImage() {
-                const ctx = canvas01[index].getContext('2d')
-                ctx.drawImage(image, 0, 0)
-                processImage(ctx)
-            }
-        })
-
-        function processImage(context) {
-            const imageData = context.getImageData(0, 0, 32, 32)
-            const data = imageData.data
-            
-            for (let i = 0 ; i < data.length ; i +=4) {
-                const r = data[i]
-                const g = data[i + 1]
-                const b = data[i + 2]
-
-                if (r == 98 && g == 156 && b == 131) {
-                    data[i + 3] = 0
-                }
-            }
-            context.putImageData(imageData, 0, 0)
-        }
-    }
-
-    window.onload = bg
     
     return (
         <div className={!props.off ? 'pokedex-container' : 'pokedex-container on'}>
@@ -78,10 +45,7 @@ const Pokedex = (props) => {
                             onClick={e => setInfo(index)}>
                                 <div className="pokemon-icon">
                                     <div className="pokemon-icons-wrap">
-                                        <canvas className='canvas-01'
-                                            width='32px'
-                                            height='32px'
-                                        />
+                                        <RemoveBGicon id={item.id}/>
                                     </div>
                                     <p>{item.name}</p>
                                 </div>

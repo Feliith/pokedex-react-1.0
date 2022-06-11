@@ -13,7 +13,7 @@
 .pokedex-container.on {
     width: 340px;
     height: 486px;
-    opacity: 80%;
+    opacity: 1;
     pointer-events: auto;
 }
 
@@ -46,6 +46,14 @@
 
 .pokedex-container > button:nth-child(3):hover {
     filter: brightness(80%);
+}
+
+@media screen and (max-width: 500px) {
+    .pokedex-container > button:nth-child(3) {
+        top: -60px;
+        left: 5px;
+        z-index: 100;
+    }
 }
 
 .pokedex-wrap {
