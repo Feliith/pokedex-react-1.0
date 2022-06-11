@@ -8,6 +8,7 @@
 
 .pokedex-closed.off {
     transform: scale(50%);
+    opacity: 0;
 }
 
 .pokedex-cover {

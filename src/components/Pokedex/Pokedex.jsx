@@ -68,7 +68,7 @@ const Pokedex = (props) => {
         <div className={!props.off ? 'pokedex-container' : 'pokedex-container on'}>
             <img src={Pokedex03} />
             <img src={Pokedex03} />
-            <button onClick={setOff}><img src={Triangle} /></button>
+            <button onClick={!infoOn ? setOff : closeInfo}><img src={Triangle} /></button>
             <div className="pokedex-wrap">
                 <div className={infoOn ? "pokemon-wrap off" : "pokemon-wrap"}>
                     {PokeDex.map((item, index) => {
@@ -91,7 +91,7 @@ const Pokedex = (props) => {
                     })}
                 </div>
                 {
-                    infoOn ? <PokemonInfo infoOn={infoOn} pokemon={actualPokemon} closeInfo={closeInfo} /> : ''
+                    infoOn ? <PokemonInfo infoOn={infoOn} pokemon={actualPokemon} /> : ''
                 }
             </div>
         </div>
