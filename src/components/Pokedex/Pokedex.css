@@ -67,6 +67,13 @@
     flex-direction: column;
     width: 100%;
     min-height: 1px;
+    transition: .3s;
+    position: relative;
+}
+
+.pokemon-wrap.off {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .pokemon-button {

@@ -5,16 +5,33 @@ import PokeDex from '../../data/PokeDex'
 
 import Pokedex03 from '../../img/pokedex-03.png'
 import Triangle from '../../img/triangle.png'
+import { useState } from 'react'
+
+import PokemonInfo from './PokemonInfo/PokemonInfo'
 
 const Pokedex = (props) => {
 
     function setOff() {
         props.setOff(false)
+        setInfoOn(false)
+        setActualPokemon(0)
+    }
+
+    function closeInfo() {
+        setInfoOn(false)
+        setActualPokemon(0)
+    }
+
+    const [infoOn, setInfoOn] = useState(false)
+    const [actualPokemon, setActualPokemon] = useState(0)
+
+    function setInfo(index) {
+        setActualPokemon(PokeDex[index])
+        setInfoOn(!infoOn)
     }
 
     function bg() {
         const canvas01 = document.querySelectorAll('.canvas-01')
-        const canvas02 = document.querySelectorAll('.canvas-02')
 
         PokeDex.map((item, index) => {
             const image = new Image()
@@ -23,18 +40,6 @@ const Pokedex = (props) => {
 
             function drawImage() {
                 const ctx = canvas01[index].getContext('2d')
-                ctx.drawImage(image, 0, 0)
-                processImage(ctx)
-            }
-        })
-
-        PokeDex.map((item, index) => {
-            const image = new Image()
-            image.src = require(`../../img/icons/${item.id}-2.png`)
-            image.onload = drawImage
-
-            function drawImage() {
-                const ctx = canvas02[index].getContext('2d')
                 ctx.drawImage(image, 0, 0)
                 processImage(ctx)
             }
@@ -65,18 +70,15 @@ const Pokedex = (props) => {
             <img src={Pokedex03} />
             <button onClick={setOff}><img src={Triangle} /></button>
             <div className="pokedex-wrap">
-                <div className="pokemon-wrap">
+                <div className={infoOn ? "pokemon-wrap off" : "pokemon-wrap"}>
                     {PokeDex.map((item, index) => {
                         return (
                             <button key={index}
-                            className='pokemon-button'>
+                            className='pokemon-button'
+                            onClick={e => setInfo(index)}>
                                 <div className="pokemon-icon">
                                     <div className="pokemon-icons-wrap">
                                         <canvas className='canvas-01'
-                                            width='32px'
-                                            height='32px'
-                                        />
-                                        <canvas className='canvas-02 off'
                                             width='32px'
                                             height='32px'
                                         />
@@ -88,6 +90,9 @@ const Pokedex = (props) => {
                         )
                     })}
                 </div>
+                {
+                    infoOn ? <PokemonInfo infoOn={infoOn} pokemon={actualPokemon} closeInfo={closeInfo} /> : ''
+                }
             </div>
         </div>
     )
