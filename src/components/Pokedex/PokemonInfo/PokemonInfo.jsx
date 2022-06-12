@@ -99,26 +99,29 @@ const PokemonInfo = (props) => {
                     props.pokemon.evolutions ?
                         props.pokemon.evolutions.map((item, index) => {
                             return (
-                                <div key={index} className='pokemon-evolution-icon'>
-                                    {
-                                        PokeDex[item].gender == 'MF' ?
-                                            <RemoveBGEV id={PokeDex[item].id} gender={'m'} evolution={true} /> : ''
-                                    }
-                                    {
-                                        PokeDex[item].gender == 'M' ?
-                                            <RemoveBGEV id={PokeDex[item].id} gender={'m'} evolution={true} /> : ''
-                                    }
-                                    {
-                                        PokeDex[item].gender == 'F' ?
-                                            <RemoveBGEV id={PokeDex[item].id} gender={'f'} evolution={true} /> : ''
-                                    }
-                                    {
-                                        PokeDex[item].gender == undefined ?
-                                            <RemoveBGEV id={PokeDex[item].id} gender={''} evolution={true} /> : ''
-                                    }
-                                    <p>#{PokeDex[item].id}</p>
-                                    <p>{PokeDex[item].name}</p>
-                                </div>
+                                <>
+                                    <div key={index} className='pokemon-evolution-icon'>
+                                        {
+                                            PokeDex[item].gender == 'MF' ?
+                                                <RemoveBGEV id={PokeDex[item].id} gender={'m'} evolution={true} /> : ''
+                                        }
+                                        {
+                                            PokeDex[item].gender == 'M' ?
+                                                <RemoveBGEV id={PokeDex[item].id} gender={'m'} evolution={true} /> : ''
+                                        }
+                                        {
+                                            PokeDex[item].gender == 'F' ?
+                                                <RemoveBGEV id={PokeDex[item].id} gender={'f'} evolution={true} /> : ''
+                                        }
+                                        {
+                                            PokeDex[item].gender == undefined ?
+                                                <RemoveBGEV id={PokeDex[item].id} gender={''} evolution={true} /> : ''
+                                        }
+                                        <p>#{PokeDex[item].id}</p>
+                                        <p>{PokeDex[item].name}</p>
+                                    </div>
+                                    <span>&#8594;</span>
+                                </> 
                             )
                         }) : ''
                 }

@@ -127,6 +127,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
 .pokemon-evolution-icon p {
@@ -136,6 +137,10 @@
 
 .pokemon-evolution-icon p:nth-child(2) {
     margin-top: 6px;
+}
+
+.pokemon-evolutions span:last-child {
+    display: none;
 }
 
 @keyframes fadeIn {

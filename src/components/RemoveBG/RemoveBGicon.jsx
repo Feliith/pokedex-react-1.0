@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const RemoveBG = (props) => {
     
-    const source = require(`../../img/icons/${props.id}-1.png`)
+    const src01 = require(`../../img/icons/${props.id}-1.png`)
+    const src02 = require(`../../img/icons/${props.id}-2.png`)
+
+    const [source, setSource] = useState(src01)
+
+    if (source == src01) {
+        setTimeout(() => {
+            setSource(src02)
+        }, 800)
+    } else {
+        setTimeout(() => {
+            setSource(src01)
+        }, 800)
+    }
 
     function bg() {
         const canvas = document.querySelector(`.canvas-${props.id}-icon`)

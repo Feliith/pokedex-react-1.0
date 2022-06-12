@@ -667,7 +667,7 @@ const PokeDex = [
         evolutions: [60, 61, 62]
     },
     {
-        id: '061',
+        id: '062',
         name: 'Poliwrath',
         gender: 'MF',
         data: {
